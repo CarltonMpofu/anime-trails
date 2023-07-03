@@ -1,17 +1,48 @@
 body
 {
     text-align: center;
+    background-image: linear-gradient(to right, #141e30, #243b55);
+    color: white;
 }
 
-main{
+
+main
+{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+}
+
+h2
+{
+    font-size: 5rem;
+    margin: 0;
+    
+}
+
+.anime-background
+{
+    margin-top: 25px;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.anime-background:nth-child(even)
+{
+    background-color: #112F99;
+    
+    
+}
+
+.anime-background:nth-child(odd)
+{
+    background-color: #1C4E99;
 }
 
 .img-background
 {
-    width: 56.25rem;
+    width: 900px;
 }
 
 .characters
