@@ -29,8 +29,8 @@ h3
     background-color: #066DEB;
     padding: 2.5%;
     border-radius: 10px;
-    margin-top: 30px;
-    margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 12px;
     font-size: 1.5rem;
 }
 
@@ -45,10 +45,29 @@ p
 {
     font-family: 'Merriweather', serif;
     /* font-weight: 700; */
+    line-height: 1.5;
 }
 
 img{
     display: block;
+}
+
+hr
+{
+    /* border: 0px;
+    border-top: 10px dotted white;
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    opacity: 50% */
+
+    border: none;
+    width: 50%;
+    height: 50px;
+    /* border-bottom: 1px solid white; */
+    box-shadow: 0 20px 20px -20px white;
+    margin-top: 20px;
+    margin-bottom: 70px;
 }
 
 .nje
@@ -83,7 +102,7 @@ img{
 .img-background
 {
     width: 100%;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .quote
@@ -93,27 +112,6 @@ img{
     width: 100%;
 }
 
-.left-quotation-mark, .right-quotation-mark
-{
-    /* display: inline-block; */
-    width: 40px;
-    background-color: white;
-    border-radius: 50%;
-    
-}
-
-.left-quotation-mark
-{
-    display: block;
-}
-
-
-.right-quotation-mark
-{
-    float: right;
-    transform: rotate(180deg);
-    
-}
 
 .quote-background
 {
@@ -121,12 +119,14 @@ img{
     display: inline-block;
     padding: 1%;
     border-radius: 15px;
-    margin: 0 50px;
+    margin: 0 0px;
+    margin-top: 20px;
 }
 
 .quote-text
 {
     font-size: 1rem;
+    letter-spacing: 0.01em;
 }
 
 .characters
