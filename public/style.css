@@ -93,10 +93,12 @@ a{
     color: white;
 }
 
-.nje
+.background
 {
     width: 920px;
 }
+
+/* Anime details */
 
 .anime-name
 {
@@ -122,11 +124,13 @@ a{
     background-color: #1C4E99;
 }
 
-.img-background
+.anime-image
 {
     width: 100%;
     /* margin-bottom: 30px; */
 }
+
+/* Quote section */
 
 .quote
 {
@@ -152,6 +156,8 @@ a{
     font-size: 1.2rem;
     letter-spacing: 0.01em;
 }
+
+/* Character section */
 
 .characters
 {
@@ -182,7 +188,7 @@ a{
 
 
 @media only screen and (max-width: 990px) {
-    .nje{
+    .background{
         width: 95%;
     }
 }
@@ -259,30 +265,25 @@ a{
     }
 
     hr
-{
-    /* border: 0px;
-    border-top: 10px dotted white;
-    width: 80%;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    opacity: 50% */
+    {
+        /* border: 0px;
+        border-top: 10px dotted white;
+        width: 80%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        opacity: 50% */
 
-    border: none;
-    width: 50%;
-    height: 40px;
-    /* border-bottom: 1px solid white; */
-    box-shadow: 0 10px 10px -10px white;
-    margin-top: 0;
-    margin-bottom: 40px;
-}
-
-    .nje{
-        width: 100%;
+        border: none;
+        width: 50%;
+        height: 40px;
+        /* border-bottom: 1px solid white; */
+        box-shadow: 0 10px 10px -10px white;
+        margin-top: 0;
+        margin-bottom: 40px;
     }
 
-    .character
-    {
-        width: 85%;
+    .background{
+        width: 100%;
     }
 
     .quote-text
@@ -292,11 +293,12 @@ a{
         letter-spacing: 0.01em;
     }
 
-    .im2 {
-        position: absolute;
-        bottom: 13px;
-        right: 0px;
-        height: 25px;
-      }
+    .character
+    {
+        width: 85%;
+    }
+
+    
+
     
 }
