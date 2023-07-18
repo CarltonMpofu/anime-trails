@@ -17,6 +17,15 @@ main
     
 }
 
+/* h1
+{
+    font-size: 5rem;
+    background-color: #066DEB;
+    border-radius: 15px;
+    font-family: 'Merriweather', serif;
+    
+} */
+
 h2
 {
     font-size: 5rem;
@@ -27,11 +36,11 @@ h3
 {
     display: inline-block;
     background-color: #066DEB;
-    padding: 2.5%;
-    border-radius: 10px;
+    padding: 2.5% 3%;
+    border-radius: 18px;
     margin-top: 0;
     margin-bottom: 12px;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 h4
@@ -68,6 +77,20 @@ hr
     box-shadow: 0 20px 20px -20px white;
     margin-top: 20px;
     margin-bottom: 70px;
+}
+
+figure
+{
+    margin: 0;
+}
+
+figcaption
+{
+    font-size: 0.7rem;
+}
+
+a{
+    color: white;
 }
 
 .nje
@@ -116,6 +139,7 @@ hr
 .quote-background
 {
     background-color: #066DEB;
+    /* background-color: #112F99; */
     display: inline-block;
     padding: 1%;
     border-radius: 15px;
@@ -125,7 +149,7 @@ hr
 
 .quote-text
 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 0.01em;
 }
 
@@ -146,12 +170,14 @@ hr
     margin: 0 20px;
 }
 
-.character > img
+
+.character > figure > img
 {
     /* width: 360px; */
     width: 100%;
     height: 267px;
 }
+
 
 
 
@@ -162,7 +188,7 @@ hr
 }
 
 @media only screen and (max-width: 915px) {
-    .character > img
+    .character > figure > img
     {
         /* width: 360px; */
         /* width: 80%; */
@@ -171,6 +197,11 @@ hr
 }
 
 @media only screen and (max-width: 768px) {
+
+    h2{
+        font-size: 3.8rem;
+    }
+
     .characters
     {
         display: flex;
@@ -190,11 +221,62 @@ hr
         
     }
 
-    .character > img
+    .character > figure > img
     {
         /* width: 360px; */
         /* width: 80%; */
-        height: 255px;
+        height: auto;
     }
 
+}
+
+@media only screen and (max-width: 576px) {
+
+    h2
+    {
+        font-size: 2rem;
+    }
+
+    h3
+    {
+        font-size: 1.2rem;
+        padding: 4% 5%;
+    }
+
+    h4{
+        font-size: 1.1rem;
+    }
+
+    p
+    {
+        font-size: 0.8rem;
+    }
+
+    figcaption
+{
+    font-size: 0.5rem;
+}
+
+    .nje{
+        width: 100%;
+    }
+
+    .character
+    {
+        width: 85%;
+    }
+
+    .quote-text
+    {
+        font-size: 1rem;
+        letter-spacing: 0.01em;
+    }
+
+    .im2 {
+        position: absolute;
+        bottom: 13px;
+        right: 0px;
+        height: 25px;
+      }
+    
 }
