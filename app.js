@@ -238,7 +238,7 @@ app.get("/", function(req, res){
             });
             //console.log(foundAnime[0]); 
             res.render("index", {foundAnime: foundAnime})
-            
+             
         });
     } 
     catch(exception)
