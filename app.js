@@ -1,8 +1,10 @@
 const express = require("express");
 const mongoose = require('mongoose');
+const ejs = require("ejs");
 
 const app = express();
 
+app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
 mongoose.connect('mongodb://127.0.0.1:27017/animeDB', {useNewUrlParser: true});
@@ -224,7 +226,28 @@ function arrayLimit(val) {
   }
 
 app.get("/", function(req, res){
-    res.sendFile(__dirname + "/index.html");
+    // res.render("index");
+
+    try
+    {
+        Anime.find({}).then(function(foundAnime){
+            
+            foundAnime.forEach(anime => {
+                console.log(anime); 
+                console.log("\n\n\n"); 
+            });
+            //console.log(foundAnime[0]); 
+            res.render("index", {foundAnime: foundAnime})
+            
+        });
+    } 
+    catch(exception)
+    {
+        console.log(exception);
+    }
+
+    
+
 }); 
 
 app.listen(3000, function(){

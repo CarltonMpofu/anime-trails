@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Anime</title>
+  </head>
+  <body>
+    <main>
+      
+      <div class="background">
+        <h1>Anime Trails</h1>
+
+        <% foundAnime.forEach(anime => {  %>
+           
+      
+
+        <div class="anime-background">
+          <div class="anime-name">
+            <h2><%= anime.name %></h2>
+          </div>
+
+          <p><%= anime.genre %></p>
+
+          <figure>
+            <img
+              class="anime-image"
+              src= <%= anime.image %>
+              alt=""
+              srcset=""
+            />
+            <figcaption>
+              <a
+                href= <%= anime.attribution_link %>
+                target="_blank"
+                rel="noopener noreferrer"
+                title="gear icons"
+                ><%= anime.attribution_name %>  found at Alpha Coders </a
+              >
+            </figcaption>
+          </figure>
+          <hr />
+
+          <h3>Favourite Quote</h3>
+          <div class="quote">
+            <div>
+              <div class="quote-background">
+                <p class="quote-text">
+                  <%= anime.quote_text %>
+                </p>
+                <p class="quote-author"><%= anime.quote_author %></p>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <h3>Favourite Characters</h3>
+          <div class="characters">
+            <div class="character">
+              <h4><%= anime.characters[0].name %></h4>
+              <figure>
+                <img
+                  class="character-image"
+                  src=<%= anime.characters[0].image %>
+                  alt=""
+                />
+
+                <figcaption>
+                  <a
+                    href=<%= anime.characters[0].attr_link %>
+                    target="_blank"
+                    title="gear icons"
+                    ><%= anime.characters[0].attr_name %> found at Alpha
+                    Coders</a
+                  >
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="character">
+              <h4><%= anime.characters[1].name %></h4>
+              <figure>
+                <img
+                  class="character-image"
+                  src=<%= anime.characters[1].image %>
+                  alt=""
+                />
+                <figcaption>
+                  <a
+                    href=<%= anime.characters[1].attr_link %>
+                    target="_blank"
+                    title="gear icons"
+                    ><%= anime.characters[1].attr_name %> found at Alpha
+                    Coders</a
+                  >
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="character">
+              <h4><%= anime.characters[2].name %></h4>
+              <figure>
+                <img
+                  class="character-image"
+                  src=<%= anime.characters[2].image %>
+                  alt=""
+                />
+                <figcaption>
+                  <a
+                    href=<%= anime.characters[2].attr_link %>
+                    target="_blank"
+                    title="gear icons"
+                    ><%= anime.characters[2].attr_name %> found at Alpha
+                    Coders</a
+                  >
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="character">
+              <h4><%= anime.characters[3].name %></h4>
+              <figure>
+                <img
+                  class="character-image"
+                  src=<%= anime.characters[3].image %>
+                  alt=""
+                />
+                <figcaption>
+                  <a
+                    href=<%= anime.characters[3].attr_link %>
+                    target="_blank"
+                    title="gear icons"
+                    ><%= anime.characters[3].attr_name %> found at Alpha
+                    Coders</a
+                  >
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <% }); %>
+
+
+      </div>
+    </main>
+  </body>
+</html>
