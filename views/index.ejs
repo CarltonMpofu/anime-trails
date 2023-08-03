@@ -19,21 +19,21 @@
 
           <figure>
             <!-- https://images4.alphacoders.com/313/3136.jpg -->
-            <object data=<%= anime.image %>>
             <img
               class="anime-image"
-              src= "no-photo.png"
+              src= <%= anime.image %>
               alt=""
               srcset=""
+              
+              onerror='changeImageAndLink(this, "<%= anime.id %>")'
             />
-            <!-- <a href="https://www.flaticon.com/free-icons/no-photo" title="no photo icons">No photo icons created by IconMarketPK - Flaticon</a> -->
-          </object>
             <figcaption>
               <a
                 href= <%= anime.attribution_link %>
                 target="_blank"
                 rel="noopener noreferrer"
                 title="gear icons"
+                id="<%= anime.id %>"
                 ><%= anime.attribution_name %>  found at Alpha Coders </a
               >
             </figcaption>
@@ -61,19 +61,21 @@
               <figure>
                 <!-- data="https://images4.alphacoders.com/313/3136.jpg" -->
                 <!-- <%= anime.characters[0].image %> -->
-                <object data="https://images4.alphacoders.com/313/313.jpg">
+                
                 <img
                   class="character-image"
-                  src="no-photo.png"
+                  src= <%= anime.characters[0].image %>
                   alt=""
+                  onerror='changeImageAndLink(this, "<%= anime.characters[0].id %>")'
                 />
-              </object>
+              
 
                 <figcaption>
                   <a
                     href=<%= anime.characters[0].attr_link %>
                     target="_blank"
                     title="gear icons"
+                    id="<%= anime.characters[0].id %>"
                     ><%= anime.characters[0].attr_name %> found at Alpha
                     Coders</a
                   >
@@ -84,18 +86,20 @@
             <div class="character">
               <h4><%= anime.characters[1].name %></h4>
               <figure>
-                <object data="https://images4.alphacoders.com/313/313.jpg">
+                
                 <img
                   class="character-image"
-                  src="no-photo.png"
+                  src=<%= anime.characters[1].image %>
                   alt=""
+                  onerror='changeImageAndLink(this, "<%= anime.characters[1].id %>")'
                 />
-              </object>
+              
                 <figcaption>
                   <a
                     href=<%= anime.characters[1].attr_link %>
                     target="_blank"
                     title="gear icons"
+                    id="<%= anime.characters[1].id %>"
                     ><%= anime.characters[1].attr_name %> found at Alpha
                     Coders</a
                   >
@@ -106,18 +110,20 @@
             <div class="character">
               <h4><%= anime.characters[2].name %></h4>
               <figure>
-                <object data="https://images4.alphacoders.com/313/313.jpg">
+                
                 <img
                   class="character-image"
-                  src="no-photo.png"
+                  src=<%= anime.characters[2].image %>
                   alt=""
+                  onerror='changeImageAndLink(this, "<%= anime.characters[2].id %>")'
                 />
-              </object>
+              
                 <figcaption>
                   <a
                     href=<%= anime.characters[2].attr_link %>
                     target="_blank"
                     title="gear icons"
+                    id="<%= anime.characters[2].id %>"
                     ><%= anime.characters[2].attr_name %> found at Alpha
                     Coders</a
                   >
@@ -128,18 +134,20 @@
             <div class="character">
               <h4><%= anime.characters[3].name %></h4>
               <figure>
-                <object data="https://images4.alphacoders.com/313/313.jpg">
+                
                 <img
                   class="character-image"
-                  src="no-photo.png"
+                  src=<%= anime.characters[3].image %>
                   alt=""
+                  onerror='changeImageAndLink(this, "<%= anime.characters[3].id %>")'
                 />
-              </object>
+              
                 <figcaption>
                   <a
                     href=<%= anime.characters[3].attr_link %>
                     target="_blank"
                     title="gear icons"
+                    id="<%= anime.characters[3].id %>"
                     ><%= anime.characters[3].attr_name %> found at Alpha
                     Coders</a
                   >
