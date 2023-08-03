@@ -1,13 +1,35 @@
+require('dotenv').config();
 const express = require("express");
 const mongoose = require('mongoose');
 const ejs = require("ejs");
 
 const app = express();
+const PORT = process.env.PORT || 3000;
+
+
 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
-mongoose.connect('mongodb://127.0.0.1:27017/animeDB', {useNewUrlParser: true});
+mongoose.set("strictQuery", false);
+
+const connectDB = async () => {
+    try {
+      const conn = await mongoose.connect(process.env.MONGO_URI);
+      console.log(`MongoDB Connected: ${conn.connection.host}`);
+    } catch (error) {
+      console.log(error);
+      process.exit(1);
+    }
+}
+
+connectDB().then(() => {
+    app.listen(PORT, () => {
+        console.log("listening for requests");
+    })
+})
+
+// mongoose.connect('mongodb://127.0.0.1:27017/animeDB', {useNewUrlParser: true});
 
 const CharacterSchema = new mongoose.Schema(
     {
@@ -221,9 +243,23 @@ const onePiece = new Anime({
 // gurrenLagann.save();
 // onePiece.save();
 
+
 function arrayLimit(val) {
     return val.length === 4;
-  }
+}
+
+app.get("/add-anime", async function(req, res){
+    try
+    {
+        await Anime.insertMany([narutoShippuden, fairyTail, gurrenLagann, onePiece]);
+    }
+    catch(error)
+    {
+        console.log(error);
+    }
+    
+});
+
 
 app.get("/", function(req, res){
     // res.render("index");
@@ -250,6 +286,6 @@ app.get("/", function(req, res){
 
 }); 
 
-app.listen(3000, function(){
-    console.log("Server running on port 3000");
-});
+// app.listen(3000, function(){
+//     console.log("Server running on port 3000");
+// });
