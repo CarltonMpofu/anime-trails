@@ -17,14 +17,6 @@ main
     
 }
 
-/* h1
-{
-    font-size: 5rem;
-    background-color: #066DEB;
-    border-radius: 15px;
-    font-family: 'Merriweather', serif;
-    
-} */
 
 h2
 {
@@ -53,7 +45,6 @@ h4
 p
 {
     font-family: 'Merriweather', serif;
-    /* font-weight: 700; */
     line-height: 1.5;
 }
 
@@ -63,17 +54,10 @@ img{
 
 hr
 {
-    /* border: 0px;
-    border-top: 10px dotted white;
-    width: 80%;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    opacity: 50% */
 
     border: none;
     width: 50%;
     height: 50px;
-    /* border-bottom: 1px solid white; */
     box-shadow: 0 20px 20px -20px white;
     margin-top: 20px;
     margin-bottom: 70px;
@@ -133,14 +117,12 @@ img
 {
     width: 100%;
     margin: 10px auto;
-    /* margin-bottom: 10px; */
 }
 
 /* Quote section */
 
 .quote
 {
-    /* background-color:antiquewhite; */
     display: inline-block;
     width: 100%;
 }
@@ -149,7 +131,6 @@ img
 .quote-background
 {
     background-color: #066DEB;
-    /* background-color: #112F99; */
     display: inline-block;
     padding: 1%;
     border-radius: 15px;
@@ -170,15 +151,12 @@ img
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* background-color: aqua; */
     justify-content: space-between;
-    /* margin: 0 20px; */
 }
 
 .character
 {
     width: 40%;
-    /* background-color: blue; */
     margin: 0 20px;
 }
 
@@ -201,8 +179,6 @@ img
 @media only screen and (max-width: 915px) {
     .character > figure >  img
     {
-        /* width: 360px; */
-        /* width: 80%; */
         height: 200px;
     }
 }
@@ -217,25 +193,18 @@ img
     {
         display: flex;
         flex-direction: column;
-        /* flex-wrap: wrap; */
-        /* background-color: aqua; */
-        /* justify-content: space-between; */
-        /* margin: 0 20px; */
         align-items: center;
     }
 
     .character
     {
         width: 75%;
-        /* background-color: blue; */
         margin: 0 20px;
         
     }
 
     .character > figure > img
     {
-        /* width: 360px; */
-        /* width: 80%; */
         height: auto;
     }
 
@@ -255,7 +224,6 @@ img
     }
 
     h4{
-        /* font-size: 1.1rem; */
         font-size: 1rem;
     }
 
@@ -271,17 +239,10 @@ img
 
     hr
     {
-        /* border: 0px;
-        border-top: 10px dotted white;
-        width: 80%;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        opacity: 50% */
 
         border: none;
         width: 50%;
         height: 40px;
-        /* border-bottom: 1px solid white; */
         box-shadow: 0 10px 10px -10px white;
         margin-top: 0;
         margin-bottom: 40px;
@@ -293,7 +254,6 @@ img
 
     .quote-text
     {
-        /* font-size: 1rem; */
         font-size: 0.8rem;
         letter-spacing: 0.01em;
     }
@@ -302,8 +262,5 @@ img
     {
         width: 85%;
     }
-
-    
-
     
 }

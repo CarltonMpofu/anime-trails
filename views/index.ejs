@@ -7,8 +7,6 @@
         <h1>Anime Trails</h1>
 
         <% foundAnime.forEach(anime => {  %>
-           
-      
 
         <div class="anime-background">
           <div class="anime-name">
@@ -18,7 +16,6 @@
           <p><%= anime.genre %></p>
 
           <figure>
-            <!-- https://images4.alphacoders.com/313/3136.jpg -->
             <img
               class="anime-image"
               src= <%= anime.image %>
@@ -51,7 +48,6 @@
               </div>
             </div>
           </div>
-
           <hr />
 
           <h3>Favourite Characters</h3>
@@ -59,9 +55,6 @@
             <div class="character">
               <h4><%= anime.characters[0].name %></h4>
               <figure>
-                <!-- data="https://images4.alphacoders.com/313/3136.jpg" -->
-                <!-- <%= anime.characters[0].image %> -->
-                
                 <img
                   class="character-image"
                   src= <%= anime.characters[0].image %>
