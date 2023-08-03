@@ -232,10 +232,10 @@ app.get("/", function(req, res){
     {
         Anime.find({}).then(function(foundAnime){
             
-            foundAnime.forEach(anime => {
-                console.log(anime); 
-                console.log("\n\n\n"); 
-            });
+            // foundAnime.forEach(anime => {
+            //     console.log(anime); 
+            //     console.log("\n\n\n"); 
+            // });
             //console.log(foundAnime[0]); 
             res.render("index", {foundAnime: foundAnime})
              

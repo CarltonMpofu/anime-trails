@@ -18,12 +18,16 @@
           <p><%= anime.genre %></p>
 
           <figure>
+            <!-- https://images4.alphacoders.com/313/3136.jpg -->
+            <object data=<%= anime.image %>>
             <img
               class="anime-image"
-              src= <%= anime.image %>
+              src= "no-photo.png"
               alt=""
               srcset=""
             />
+            <!-- <a href="https://www.flaticon.com/free-icons/no-photo" title="no photo icons">No photo icons created by IconMarketPK - Flaticon</a> -->
+          </object>
             <figcaption>
               <a
                 href= <%= anime.attribution_link %>
@@ -55,11 +59,15 @@
             <div class="character">
               <h4><%= anime.characters[0].name %></h4>
               <figure>
+                <!-- data="https://images4.alphacoders.com/313/3136.jpg" -->
+                <!-- <%= anime.characters[0].image %> -->
+                <object data="https://images4.alphacoders.com/313/313.jpg">
                 <img
                   class="character-image"
-                  src=<%= anime.characters[0].image %>
+                  src="no-photo.png"
                   alt=""
                 />
+              </object>
 
                 <figcaption>
                   <a
@@ -76,11 +84,13 @@
             <div class="character">
               <h4><%= anime.characters[1].name %></h4>
               <figure>
+                <object data="https://images4.alphacoders.com/313/313.jpg">
                 <img
                   class="character-image"
-                  src=<%= anime.characters[1].image %>
+                  src="no-photo.png"
                   alt=""
                 />
+              </object>
                 <figcaption>
                   <a
                     href=<%= anime.characters[1].attr_link %>
@@ -96,11 +106,13 @@
             <div class="character">
               <h4><%= anime.characters[2].name %></h4>
               <figure>
+                <object data="https://images4.alphacoders.com/313/313.jpg">
                 <img
                   class="character-image"
-                  src=<%= anime.characters[2].image %>
+                  src="no-photo.png"
                   alt=""
                 />
+              </object>
                 <figcaption>
                   <a
                     href=<%= anime.characters[2].attr_link %>
@@ -116,11 +128,13 @@
             <div class="character">
               <h4><%= anime.characters[3].name %></h4>
               <figure>
+                <object data="https://images4.alphacoders.com/313/313.jpg">
                 <img
                   class="character-image"
-                  src=<%= anime.characters[3].image %>
+                  src="no-photo.png"
                   alt=""
                 />
+              </object>
                 <figcaption>
                   <a
                     href=<%= anime.characters[3].attr_link %>

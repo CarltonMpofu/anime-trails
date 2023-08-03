@@ -57,7 +57,7 @@ p
     line-height: 1.5;
 }
 
-img{
+img, object{
     display: block;
 }
 
@@ -124,10 +124,16 @@ a{
     background-color: #1C4E99;
 }
 
+object
+{
+    width: 100%; 
+    margin-bottom: 5px;
+}
+
 .anime-image
 {
-    width: 100%;
-    /* margin-bottom: 30px; */
+    width: 40%;
+    margin: 10px auto;
 }
 
 /* Quote section */
@@ -176,12 +182,21 @@ a{
     margin: 0 20px;
 }
 
-
-.character > figure > img
+.character > figure > object 
 {
-    /* width: 360px; */
     width: 100%;
     height: 267px;
+}
+
+.character > figure > object > img
+{
+    /* width: 100%;
+    height: 267px; */
+
+    width: 90%;
+    /* height: 267px; */
+    margin: 0px auto;
+    margin-top: 18px;
 }
 
 
@@ -194,7 +209,7 @@ a{
 }
 
 @media only screen and (max-width: 915px) {
-    .character > figure > img
+    .character > figure > object > img
     {
         /* width: 360px; */
         /* width: 80%; */
@@ -227,7 +242,7 @@ a{
         
     }
 
-    .character > figure > img
+    .character > figure > object > img
     {
         /* width: 360px; */
         /* width: 80%; */
