@@ -6,13 +6,12 @@ const ejs = require("ejs");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-
-
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
 mongoose.set("strictQuery", false);
 
+// Connect to database
 const connectDB = async () => {
     try {
       const conn = await mongoose.connect(process.env.MONGO_URI);
@@ -31,6 +30,8 @@ connectDB().then(() => {
 
 // mongoose.connect('mongodb://127.0.0.1:27017/animeDB', {useNewUrlParser: true});
 
+// Create Character Schema
+
 const CharacterSchema = new mongoose.Schema(
     {
         name: {type: String, required: true},
@@ -40,6 +41,8 @@ const CharacterSchema = new mongoose.Schema(
     }
 )
 const Character = mongoose.model("Character", CharacterSchema);
+
+// Create Anime Schema
 
 const AnimeSchema = new mongoose.Schema({
     name: {type: String, required: true},
@@ -57,7 +60,7 @@ const Anime = mongoose.model("Anime", AnimeSchema);
 // ·
 
 /* Template 
-const narutoShippuden = new Anime({
+const anime = new Anime({
     name: "",
     genre: " · ",
     image: "",
@@ -93,6 +96,7 @@ const narutoShippuden = new Anime({
         })]
 }); */
 
+// Create four default anime
 const narutoShippuden = new Anime({
     name: "Naruto Shippuden",
     genre: "Action · Adventure · Comedy · Superpower · Martial-Arts · Fantasy",
@@ -248,31 +252,24 @@ function arrayLimit(val) {
     return val.length === 4;
 }
 
-app.get("/add-anime", async function(req, res){
-    try
-    {
-        await Anime.insertMany([narutoShippuden, fairyTail, gurrenLagann, onePiece]);
-    }
-    catch(error)
-    {
-        console.log(error);
-    }
+// Add default anime
+// app.get("/add-anime", async function(req, res){
+//     try
+//     {
+//         await Anime.insertMany([narutoShippuden, fairyTail, gurrenLagann, onePiece]);
+//     }
+//     catch(error)
+//     {
+//         console.log(error);
+//     }
     
-});
+// });
 
-
+// Get all anime
 app.get("/", function(req, res){
-    // res.render("index");
-
     try
     {
         Anime.find({}).then(function(foundAnime){
-            
-            // foundAnime.forEach(anime => {
-            //     console.log(anime); 
-            //     console.log("\n\n\n"); 
-            // });
-            //console.log(foundAnime[0]); 
             res.render("index", {foundAnime: foundAnime})
              
         });
@@ -281,8 +278,6 @@ app.get("/", function(req, res){
     {
         console.log(exception);
     }
-
-    
 
 }); 
 
